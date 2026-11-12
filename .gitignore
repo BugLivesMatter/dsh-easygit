@@ -1,0 +1,24 @@
+# Dependencies (the plugin has none; kept for local tooling)
+node_modules/
+
+# Agent artifacts: task worktrees, claim sidecars, claim audit, logs
+.agents/
+*.dshclaim
+.dsh-file-claim*
+*.log
+
+# Local playgrounds created by scripts/playground-setup.sh
+easygit-playground/
+playground/
+
+# Test and tooling output
+coverage/
+*.tmp
+*.tsbuildinfo
+
+# OS / editor
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/

@@ -1,0 +1,6 @@
+# EasyGit bundle patch: one host row mounts the tools, /easygit routes, team-task
+# branch automation and the HTTP API used by the browser half. The `dsh.client`
+# declaration in package.json serves client.js into the Web GUI.
+- insert:
+    - id: easygit
+      name: '@local/easygit'

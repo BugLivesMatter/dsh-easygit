@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "EasyGit",
+    "description": "GitLens-style branch graph with task branches and worktrees, automatic checkpoints, quick commits, GitHub push, and AI explanations of the last commit."
+  }
+}

@@ -1,0 +1,8 @@
+# Keep the repository LF-only so generated bundles diff cleanly on every OS.
+* text=auto eol=lf
+
+*.jpg binary
+*.jpeg binary
+*.png binary
+*.svg text eol=lf
+*.sh text eol=lf

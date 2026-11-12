@@ -1,0 +1,67 @@
+{
+  "name": "@local/easygit",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "description": "EasyGit: GitLens-style branch graph, task branches and worktrees, quick commits, GitHub push, and AI commit explanations for the DSH Web GUI.",
+  "license": "MIT",
+  "author": "BugLivesMatter",
+  "homepage": "https://github.com/BugLivesMatter/dsh-easygit#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BugLivesMatter/dsh-easygit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/BugLivesMatter/dsh-easygit/issues"
+  },
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "plugin",
+    "git",
+    "gitlens",
+    "branch-graph",
+    "worktree",
+    "agent-teams"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "main": "./index.js",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "lib/**/*.js",
+    "scripts/**",
+    "docs/**",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "LICENSE",
+    "README.md",
+    "README.ru.md"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "slots"
+      ]
+    }
+  },
+  "scripts": {
+    "test": "node --test",
+    "playground": "bash scripts/playground-setup.sh ../easygit-playground --force",
+    "verify:branches": "node scripts/verify-branches.mjs ../easygit-playground --report docs/branch-verification.md"
+  }
+}
